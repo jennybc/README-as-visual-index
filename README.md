@@ -1,6 +1,6 @@
-Do you have directories on GitHub that contain alot of figures, specifically PNGs? Would you like to see all the figures at once? Like, now?
+Do you have directories on GitHub that contain alot of figures, specifically PNGs? Would you like a quick overview of the figures? Like, now?
 
-This repo holds R scripts that show how to automatically generate a visual index as the `README.md` for a figure directory, but the idea is very simple:
+This repo holds R scripts that show how to automatically generate a visual index as the `README.md` for a figure directory, but here's the only idea:
 
     ```{r}
     fig_files <- list.files(fig_dir, pattern = "png$")
@@ -8,7 +8,15 @@ This repo holds R scripts that show how to automatically generate a visual index
     writeLines(paste0("![`", fig_files, "`](", fig_files, ")"), readme_file)
     ```
 
-This snippet would be natural to include right after some code that mass produces figures.
+List the figures, shove that inside the Markdown inline image syntax, write that to `README.md`.
+
+Certain behaviors will be rewarded:
+
+  * always create a PNG for each figure, even if just to supplement to some other format that is less web-friendly
+  * have directories just for figures
+  * be systematic with figure file names; don't create regular expression puzzles for yourself
+
+This snippet would be natural to include right after any code that mass produces figures.
 
 A simple, base R example using the `iris` data:
 
