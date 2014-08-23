@@ -10,13 +10,13 @@ This repo holds R scripts that show how to automatically generate a visual index
 
 List the figures, shove that inside the Markdown inline image syntax, write that to `README.md`.
 
-Certain behaviors will be rewarded:
+Certain good habits will pay off:
 
   * always create a PNG for each figure, even if just to supplement to some other format that is less web-friendly
-  * have directories just for figures
+  * have directories just for figures; don't mix up inputs, outputs, scripts, etc.
   * be systematic with figure file names; don't create regular expression puzzles for yourself
 
-This snippet would be natural to include right after any code that mass produces figures.
+This `README`-generating snippet would be natural to include right after any code that mass produces figures.
 
 A simple, base R example using the `iris` data:
 

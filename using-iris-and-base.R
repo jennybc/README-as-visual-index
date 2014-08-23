@@ -14,5 +14,5 @@ by(iris, iris$Species, function(x) {
 fig_files <- list.files(fig_dir, pattern = "png$")
 readme_file <- file.path(fig_dir, "README.md")
 writeLines(paste0(fig_files, "\n",
-                  "![`", fig_files, "`](", fig_files, ")"), readme_file)
+                  "![`", fig_files, "`](", fig_files, ")\n\n"), readme_file)
 
